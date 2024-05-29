@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "./components/navbar/NavBar"
+import NavBar from "./components/navbar/NavBar";
+import Modal from "./components/modals/Modal";
+import LoginModal from "./components/modals/LoginModal";
+import SignUpModal from "./components/modals/SignUpModal";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const content = () => {
+  return (
+    <p>This is a model test content</p>
+  )
+}
 
 export const metadata: Metadata = {
   title: "BookNChill",
@@ -22,6 +31,8 @@ export default function RootLayout({
         <div className="pt-32">
           {children}
         </div>
+        <LoginModal />
+        <SignUpModal />
       </body>
     </html>
   );
