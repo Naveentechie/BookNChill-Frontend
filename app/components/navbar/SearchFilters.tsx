@@ -1,8 +1,8 @@
 const SearchFilters = () => {
     return (
-        <div className="h-[48px] lg:h-[64] flex flex-row items-center justify-between border rounded-full">
+        <div className="h-[48px] lg:h-[64] flex flex-row items-center justify-between border border-gray-200 shadow-md rounded-full p-8 px-3">
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:block ">
                 <div className="flex flex-row items-center justify-between">
                     <div className="cursor-pointer w-[250px] h-[64px] px-8 flex flex-col justify-center rounded-full hover:bg-gray-100">
                         <p className="text-xs font-semibold">Where</p>

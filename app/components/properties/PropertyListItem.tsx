@@ -1,20 +1,29 @@
+
+'use client'
+
 import Image from "next/image";
 
-const PropertyListItem = () => {
+
+interface PropertyListItemProps {
+    src: string;
+    title: string;
+    
+}
+const PropertyListItem: React.FC<PropertyListItemProps> = ({src, title}) => {
     return (
         <div className="cursor-pointer">
             <div className="relative overflow-hidden aspect-square rounded-xl">
-                <Image
-                    fill
-                    src="/av-1.webp"
-                    alt="Image"
-                    sizes= "(max-width: 768px) 768px, (max-width: 1200px): 768px, 768px"
-                    className="hover:scale-110 object-cover trnstition h-full w-full"
-                />
+            <Image
+                fill
+                src={src}
+                alt="Image"
+                sizes="(max-width: 768px) 100vw, (max-width: 1500px) 100vw, 120vw"
+                className="hover:scale-125 object-cover transition-transform duration-300 h-full w-full"
+            />
             </div>
 
             <div className="mt-2">
-                <p className="text-lg font-bold">Property Name</p>
+                <p className="text-lg font-bold">{title}</p>
             </div>
 
             <div className="mt-2">
